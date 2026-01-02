@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Renda Fácil Brasil</title>
+<style>
+body{background:#0f0f0f;color:#fff;font-family:Arial;text-align:center;padding:20px}
+input,button{padding:12px;width:90%;margin:6px;border-radius:6px}
+button{background:#00ff88;border:none;font-weight:bold}
+.card{background:#1c1c1c;padding:15px;margin-top:15px;border-radius:10px}
+a{color:#00ff88;text-decoration:none;font-weight:bold}
+</style>
+</head>
+<body>
+
+<h2>💰 Renda Fácil Brasil</h2>
+<p>Simule quanto você pode ganhar</p>
+
+<input type="number" id="inv" placeholder="Quanto pode investir? (R$)">
+<input type="number" id="meta" placeholder="Quanto quer ganhar? (R$)">
+<button onclick="calc()">Simular</button>
+
+<div id="res"></div>
+
+<script>
+function calc(){
+ let i = inv.value;
+ let m = meta.value;
+ if(!i || !m){ alert("Preencha tudo"); return; }
+
+ res.innerHTML = `
+ <div class="card">
+ <h3>📊 Resultado</h3>
+ <p>Com R$${i}, você pode buscar R$${m} usando:</p>
+ <p>🔥 Afiliados digitais</p>
+ <p>📱 Apps de renda extra</p>
+ <p>🛒 Revenda online</p>
+ <a href="https://seulink.com">👉 Ver oportunidades</a>
+ </div>`;
+}
+</script>
+
+</body>
+</html>
