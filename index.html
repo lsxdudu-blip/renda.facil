@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -24,18 +25,24 @@ a{color:#00ff88;text-decoration:none;font-weight:bold}
 
 <script>
 function calc(){
- let i = inv.value;
- let m = meta.value;
- if(!i || !m){ alert("Preencha tudo"); return; }
+ let i = document.getElementById("inv").value;
+ let m = document.getElementById("meta").value;
 
- res.innerHTML = `
+ if(!i || !m){
+   alert("Preencha tudo");
+   return;
+ }
+
+ document.getElementById("res").innerHTML = `
  <div class="card">
- <h3>📊 Resultado</h3>
- <p>Com R$${i}, você pode buscar R$${m} usando:</p>
- <p>🔥 Afiliados digitais</p>
- <p>📱 Apps de renda extra</p>
- <p>🛒 Revenda online</p>
- <a href="https://suarendadigitalemcasa.com.br/">👉 Ver oportunidades</a>
+   <h3>📊 Resultado</h3>
+   <p>Com R$${i}, você pode buscar R$${m} usando:</p>
+   <p>🔥 Afiliados digitais</p>
+   <p>📱 Apps de renda extra</p>
+   <p>🛒 Revenda online</p>
+   <a href="https://suarendadigitalemcasa.com.br/" target="_blank">
+     👉 Ver oportunidades
+   </a>
  </div>`;
 }
 </script>
